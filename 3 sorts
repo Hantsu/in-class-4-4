@@ -1,0 +1,91 @@
+//  main.cpp
+//  BubbleSort
+//
+//  Created by Max Taylor on 4/4/19.
+//  Copyright © 2019 Max Taylor. All rights reserved.
+//  SELECTION SORT
+
+
+
+#include <iostream>
+using namespace std;
+const int SIZE = 1000;
+//void bubble();   //bubble sort func
+void selection(int&, int&, int&);    //selection sort func
+//void insertion();    //insertion sort func
+
+int main() {
+    //const int SIZE = 1000;  //constant to declare 1000 $ array
+    int firstAra[] = {};
+    int ara[SIZE];  //1000 # array
+    int temp, value;    //temp hold variables
+    
+    //bubble(ara[SIZE], temp, value, SIZE);
+    selection(ara, temp, value);
+    //insertion();
+    
+    return 0;
+}
+
+/*void bubble(int ara[5], int temp, int value, const int SIZE){
+
+    bool swapped = true;
+    
+    cout << "Before sort:\n";
+    for (int i=0; i < SIZE; i++)
+        cout << ara[i] << " ";
+    cout << endl;
+    
+    for (int i=0; i<SIZE && swapped == true; i++)
+    {
+        swapped = false;
+        for (int j=0;j<SIZE-1; j++)
+        {
+            if (ara[j+1] < ara[j])
+            {
+                temp = ara[j];
+                ara[j] = ara[j+1];
+                ara[j+1] = temp;
+                swapped = true;
+            }
+        }
+    }
+    cout << "After sort:\n";
+    for (int i=0; i < SIZE; i++)
+        cout << nums[i] << " ";
+    cout << endl;
+    
+    //show operation count local
+}
+*/
+void selection(int ara[], int temp, int value)
+{
+    cout << "Original..\n";
+    for (int i=0; i < SIZE; i++)
+    {
+        cout << ara[i] << " ";
+    }
+    for (int i =SIZE-1; i>0; i--)
+    {
+        value = 0;
+        for(int j=0; j<1; j++)
+        {
+            if (ara[j] > ara[value])
+            {
+                value = j;
+            }
+        }
+        temp = ara[value];
+        ara[value]=ara[i];
+        ara[i]=temp;
+    }
+    
+    cout << "sorted..";
+    for (int i=0; i<SIZE; i++)
+        cout << ara[i] << " ";
+    
+    // o; Make o variable to track the operations of this sort and show locally here
+}
+void insertion(){
+    
+}
